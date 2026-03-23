@@ -4,7 +4,6 @@ import {
   Upload, Recycle, Leaf, X, Loader2,
   Wine, Shirt, Apple, Newspaper, Package, Cpu, Droplets, Utensils, Info,
 } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
 const WASTE_TYPES = [
@@ -38,12 +37,10 @@ const ScanSection = () => {
     const formData = new FormData();
     formData.append("file", file);
 
-    const url = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/classify-waste`;
+    // Use the new ML API endpoint
+    const url = `${import.meta.env.VITE_API_URL}/api/classify-waste`;
     const res = await fetch(url, {
       method: "POST",
-      headers: {
-        Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
-      },
       body: formData,
     });
 
