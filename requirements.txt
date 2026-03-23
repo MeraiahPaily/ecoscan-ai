@@ -1,7 +1,0 @@
-flask==3.0.0
-flask-cors==4.0.0
-tensorflow==2.21.0
-pillow==12.1.1
-numpy==2.4.3
-opencv-python==4.13.0.92
-scikit-learn==1.8.0
