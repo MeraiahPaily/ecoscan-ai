@@ -1,0 +1,9 @@
+*.md
+TrashType_Image_Dataset/
+garbage.zip
+__pycache__/
+*.h5
+.env
+node_modules/
+.DS_Store
+
